@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body>
+    <div tal:repeat="item context">
+      <tal:block tal:define="item_url item/getURL;
+                             item_title_or_id item/title_or_id;
+                             original_context nocall:options/original_context|context;
+                             toLocalizedTime nocall:original_context/@@plone/toLocalizedTime;
+                             item_modified item/ModificationDate">
+        <p class="tileItem visualIEFloatFix">
+          <div class="tileHeadline"
+              metal:define-macro="listitem">
+              <div style="float: left; border-left: 4px solid; border-bottom: 4px solid transparent; border-top: 4px solid transparent; margin-right: 5px; margin-top: 6px;"></div>
+            <a href="#"
+               class="summary url"
+               tal:attributes="href item_url"
+               tal:content="item_title_or_id">
+              Item Title
+            </a>
+            <span style="font-size: 80%;" class="discreet nyhetsDato" tal:content="python:toLocalizedTime(item.ModificationDate())">
+              August 16, 2001 at 23:35:59
+           </span>
+
+          </div>
+          <div style="clear: both;" class="visualClear"><!-- --></div>
+        </p>
+      </tal:block>
+    </div>
+  </body>
+</html>

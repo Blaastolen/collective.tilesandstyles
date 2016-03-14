@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collecive.tilesandstyles">
+
+    <include package=".tiles" />
+
+    <browser:resourceDirectory
+      name="tilesandstyles"
+      directory="styles" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="Tiles and Styles"
+        description="Tiles And Styles for layout of pages with Mosaic."
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+
+
+</configure>

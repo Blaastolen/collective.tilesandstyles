@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="plone.app.tiles">
+    <field type="plone.registry.field.List">
+      <title>Tiles</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value purge="false">
+      <element>tilesandstyles.search</element>
+      <element>tilesandstyles.existingcontent</element>
+    </value>
+  </record>
+
+
+  <records prefix="plone.app.mosaic.app_tiles.tilesandstyles_search"
+       interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.search</value>
+<value key="label">Search</value>
+<value key="category">media</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">50</value>
+</records>
+
+<records prefix="plone.app.mosaic.app_tiles.tilesandstyles_existingcontent"
+     interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.existingcontent</value>
+<value key="label">Existing Content with custom template</value>
+<value key="category">media</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">60</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.music">
+  <value key="name">music</value>
+  <value key="category">tile</value>
+  <value key="label">Music Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.multilingual">
+  <value key="name">multilingual</value>
+  <value key="category">tile</value>
+  <value key="label">Multilingual Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.movie">
+  <value key="name">movie</value>
+  <value key="category">tile</value>
+  <value key="label">Movie Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.literature">
+  <value key="name">literature</value>
+  <value key="category">tile</value>
+  <value key="label">Literature Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.history">
+  <value key="name">history</value>
+  <value key="category">tile</value>
+  <value key="label">History Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.games">
+  <value key="name">games</value>
+  <value key="category">tile</value>
+  <value key="label">Games Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.children">
+  <value key="name">children</value>
+  <value key="category">tile</value>
+  <value key="label">Children Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.art">
+  <value key="name">art</value>
+  <value key="category">tile</value>
+  <value key="label">Art Background</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<record name="plone.app.mosaic.default_available_actions">
+  <field type="plone.registry.field.List">
+    <value_type type="plone.registry.field.TextLine" />
+  </field>
+  <value purge="false">
+    <element>art</element>
+    <element>children</element>
+    <element>games</element>
+    <element>history</element>
+    <element>literature</element>
+    <element>movie</element>
+    <element>multilingual</element>
+    <element>music</element>
+  </value>
+</record>
+
+</registry>

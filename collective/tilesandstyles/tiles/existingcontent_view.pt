@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+  <body tal:define="view_class options/view_class;
+                    item_url context/absolute_url;
+                    item_image context/image|nothing;
+                    item_class python: item_image and 'highlightbox highlightimage' or 'highlightbox '+ view_class;
+                    item_style python: item_image and 'background-image: url(%s/image)'%item_url or '';">
+    <div tal:attributes="class item_class;" class="highlightbox">
+      <div>
+      <a href="#"
+         tal:attributes="href item_url; style item_style;">
+      <h2 tal:attributes="class python: item_image and '' or view_class" tal:content="context/Title">Headline</h2>
+      <p tal:condition="not:item_image"  tal:content="context/Description">Description</p>
+      </a>
+    </div>
+    </div>
+  </body>
+
+
+</html>

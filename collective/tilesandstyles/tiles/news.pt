@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body>
+    <div tal:repeat="item context">
+      <tal:block tal:define="item_url item/getURL;
+                             item_title_or_id item/title_or_id;
+                             item_object item/getObject;
+                             item_url item/getURL;
+                             item_section item/sections;
+                             item_section python:' '.join(item_section);
+                             item_type item/Type;
+                             item_image item_object/image|nothing;
+                             item_creator item/Creator;
+                             item_description item/Description;
+                             item_class python: item_image and 'highlightbox highlightimage visualIEFloatFix' or 'highlightbox visualIEFloatFix '+item_section;
+                             item_style python: item_image and 'background-image: url(%s/image)'%item_url or '';
+                             item_modified item/ModificationDate">
+        <div class="highlightbox visualIEFloatFix"
+             tal:define="item_object item/getObject;"
+             tal:attributes="class item_class;">
+             <div>
+          <a href="#"
+
+             tal:attributes="href item_url; style item_style;">
+          <h2 tal:attributes="class python: item_image and '' or item_section"
+               tal:content="item_title_or_id">
+              Item Title
+          </h2>
+          <p tal:condition="not:item_image" class="tileBody">
+             <div class="articleDescription" tal:content="item_object/Description">
+                                     Description
+                                 </div>
+          </p>
+          </a>
+        </div>
+          <div style="clear: both;" class="visualClear"><!-- --></div>
+        </div>
+      </tal:block>
+    </div>
+  </body>
+</html>
