@@ -42,10 +42,10 @@
 
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.music">
-  <value key="name">music</value>
+         prefix="plone.app.mosaic.formats.darkgreen">
+  <value key="name">color-darkgreen</value>
   <value key="category">tile</value>
-  <value key="label">Music Background</value>
+  <value key="label">Background darkgreen</value>
   <value key="action">tile-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
@@ -53,48 +53,10 @@
 </records>
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.multilingual">
-  <value key="name">multilingual</value>
+         prefix="plone.app.mosaic.formats.yellow">
+  <value key="name">color-yellow</value>
   <value key="category">tile</value>
-  <value key="label">Multilingual Background</value>
-  <value key="action">tile-toggle-class</value>
-  <value key="icon">true</value>
-  <value key="favorite">false</value>
-  <value key="weight">110</value>
-</records>
-
-
-<records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.movie">
-  <value key="name">movie</value>
-  <value key="category">tile</value>
-  <value key="label">Movie Background</value>
-  <value key="action">tile-toggle-class</value>
-  <value key="icon">true</value>
-  <value key="favorite">false</value>
-  <value key="weight">110</value>
-</records>
-
-
-
-
-<records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.literature">
-  <value key="name">literature</value>
-  <value key="category">tile</value>
-  <value key="label">Literature Background</value>
-  <value key="action">tile-toggle-class</value>
-  <value key="icon">true</value>
-  <value key="favorite">false</value>
-  <value key="weight">110</value>
-</records>
-
-
-<records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.history">
-  <value key="name">history</value>
-  <value key="category">tile</value>
-  <value key="label">History Background</value>
+  <value key="label">Background yellow</value>
   <value key="action">tile-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
@@ -102,34 +64,76 @@
 </records>
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.games">
-  <value key="name">games</value>
+         prefix="plone.app.mosaic.formats.turquoise">
+  <value key="name">color-turquoise</value>
   <value key="category">tile</value>
-  <value key="label">Games Background</value>
+  <value key="label">Background turquoise</value>
   <value key="action">tile-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
   <value key="weight">110</value>
 </records>
 
-
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.children">
-  <value key="name">children</value>
+         prefix="plone.app.mosaic.formats.blue">
+  <value key="name">color-blue</value>
   <value key="category">tile</value>
-  <value key="label">Children Background</value>
+  <value key="label">Background blue</value>
   <value key="action">tile-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
   <value key="weight">110</value>
 </records>
 
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.brown">
+  <value key="name">color-brown</value>
+  <value key="category">tile</value>
+  <value key="label">Background brown</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.art">
-  <value key="name">art</value>
+         prefix="plone.app.mosaic.formats.red">
+  <value key="name">color-red</value>
   <value key="category">tile</value>
-  <value key="label">Art Background</value>
+  <value key="label">Background red</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.lightgreen">
+  <value key="name">color-lightgreen</value>
+  <value key="category">tile</value>
+  <value key="label">Background lightgreen</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.purple">
+  <value key="name">color-purple</value>
+  <value key="category">tile</value>
+  <value key="label">Background purple</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.orange">
+  <value key="name">color-orange</value>
+  <value key="category">tile</value>
+  <value key="label">Background orange</value>
   <value key="action">tile-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
@@ -141,15 +145,165 @@
     <value_type type="plone.registry.field.TextLine" />
   </field>
   <value purge="false">
-    <element>art</element>
-    <element>children</element>
-    <element>games</element>
-    <element>history</element>
-    <element>literature</element>
-    <element>movie</element>
-    <element>multilingual</element>
-    <element>music</element>
+    <element>color-darkgreen</element>
+    <element>color-yellow</element>
+    <element>color-turquoise</element>
+    <element>color-blue</element>
+    <element>color-brown</element>
+    <element>color-red</element>
+    <element>color-lightgreen</element>
+    <element>color-purple</element>
+    <element>color-orange</element>
   </value>
+</record>
+
+
+<record name="plone.bundles/tilesandstyles.compile" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="compile">
+  <field type="plone.registry.field.Bool">
+    <default>True</default>
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">If its true and you modify this bundle you need to build it before production</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Does your bundle contains any RequireJS or LESS file?</title>
+  </field>
+  <value>True</value>
+</record>
+<record name="plone.bundles/tilesandstyles.conditionalcomment" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="conditionalcomment">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">In case you want to render this resource on conditional comment</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Conditional comment</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.bundles/tilesandstyles.csscompilation" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="csscompilation">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">URL of the last css compilation</title>
+  </field>
+  <value>++plone++static/tilesandstyles-compiled.css</value>
+</record>
+<record name="plone.bundles/tilesandstyles.depends" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="depends">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">In case you want to be the last: *, in case its the first should be empty</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Depends on another bundle</title>
+  </field>
+  <value>plone</value>
+</record>
+<record name="plone.bundles/tilesandstyles.develop_css" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="develop_css">
+  <field type="plone.registry.field.Bool">
+    <default>False</default>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Develop CSS</title>
+  </field>
+  <value>False</value>
+</record>
+<record name="plone.bundles/tilesandstyles.develop_javascript" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="develop_javascript">
+  <field type="plone.registry.field.Bool">
+    <default>False</default>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Develop JavaScript</title>
+  </field>
+  <value>False</value>
+</record>
+<record name="plone.bundles/tilesandstyles.enabled" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="enabled">
+  <field type="plone.registry.field.Bool">
+    <default>True</default>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">It's enabled?</title>
+  </field>
+  <value>True</value>
+</record>
+<record name="plone.bundles/tilesandstyles.expression" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="expression">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">In case its a bundle we can have a condition to render it</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Expression to render</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.bundles/tilesandstyles.jscompilation" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="jscompilation">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">URL of the last js compilation</title>
+  </field>
+  <value>++plone++static/tilesandstyles-compiled.js</value>
+</record>
+<record name="plone.bundles/tilesandstyles.last_compilation" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="last_compilation">
+  <field type="plone.registry.field.Datetime">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Date time of the last compilation of this bundle</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Last compiled date</title>
+  </field>
+  <value>2015-10-01 01:50:58.046775</value>
+</record>
+<record name="plone.bundles/tilesandstyles.resources" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="resources">
+  <field type="plone.registry.field.List">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">The resources that is going to be loaded on this bundle in order</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Loaded resources</title>
+    <value_type type="plone.registry.field.ASCIILine">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Resource name</title>
+    </value_type>
+  </field>
+  <value>
+    <element>tilesandstyles</element>
+  </value>
+</record>
+<record name="plone.resources/tilesandstyles.conf" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="conf">
+  <field type="plone.registry.field.Text">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Should be accessible on @@getWCconfig?id=name</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Configuration in JSON for the widget</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/tilesandstyles.css" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="css">
+  <field type="plone.registry.field.List">
+    <default/>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">CSS/LESS files</title>
+    <value_type type="plone.registry.field.ASCIILine">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">URL</title>
+    </value_type>
+  </field>
+  <value>
+    <element>++resource++tilesandstyles/tilesandstyles.less</element>
+  </value>
+</record>
+<record name="plone.resources/tilesandstyles.deps" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="deps">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Comma separated values of resource for shim</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Dependencies for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/tilesandstyles.export" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="export">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Export vars for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/tilesandstyles.init" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="init">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Init instruction for shim</title>
+  </field>
+  <value></value>
+</record>
+<record name="plone.resources/tilesandstyles.js" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="js">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Main js file</title>
+  </field>
+  <value>++resource++tilesandstyles/tilesandstyles.js</value>
+</record>
+<record name="plone.resources/tilesandstyles.url" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="url">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Resources base URL</title>
+  </field>
+  <value></value>
 </record>
 
 </registry>

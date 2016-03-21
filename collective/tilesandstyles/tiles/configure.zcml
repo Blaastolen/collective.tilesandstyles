@@ -11,11 +11,11 @@
 
 
     <browser:page
-        name="news_view"
+        name="coverimage_listing"
         for="*"
         layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
         permission="zope2.View"
-        template="news.pt"
+        template="templates/coverimagelisting.pt"
         />
 
       <browser:page
@@ -23,14 +23,24 @@
           for="*"
           layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
           permission="zope2.View"
-          template="newslisting.pt"
+          template="templates/newslisting.pt"
           />
+
+
+    <browser:page
+        name="horisontal_listing"
+        for="*"
+        layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+        permission="zope2.View"
+        template="templates/horisontallisting.pt"
+        />
+
 
       <browser:page
           name="existing_content"
           for="*"
           permission="zope2.View"
-          template="existingcontent_view.pt"
+          template="templates/existingcontent_view.pt"
           />
 
 
@@ -44,7 +54,6 @@
       for="*"
       permission="zope.Public"
       schema=".existingcontent.IExistingContentTile"
-      template="existingcontent_view.pt"
       />
 
 
@@ -56,7 +65,7 @@
       add_permission="plone.app.tiles.AddTile"
       class=".search.SearchTile"
       schema=".interfaces.ISearchTile"
-      template="search.pt"
+      template="templates/search.pt"
       for="*"
       />
 

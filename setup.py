@@ -33,6 +33,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'plone.app.stadnardtiles',
+        'plone.app.mosaic',
     ],
     extras_require={
         'test': ['plone.testing [zca, z2]', 'unittest2'],
