@@ -64,7 +64,7 @@
       permission="zope2.View"
       add_permission="plone.app.tiles.AddTile"
       class=".search.SearchTile"
-      schema=".interfaces.ISearchTile"
+      schema=".search.ISearchTile"
       template="templates/search.pt"
       for="*"
       />
