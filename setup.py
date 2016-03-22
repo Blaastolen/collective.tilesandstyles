@@ -33,7 +33,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'plone.app.stadnardtiles',
+        'plone.app.standardtiles',
         'plone.app.mosaic',
     ],
     extras_require={
