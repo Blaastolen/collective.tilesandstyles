@@ -1,9 +1,27 @@
 import datetime
 from DateTime import DateTime
-from collective.tilesandstyles.tiles.interfaces import IHTMLTile
-from plone.tiles import PersistentTile
+
+from zope import schema
 from zope.interface import implements
 
+from plone.supermodel.model import Schema
+from plone.tiles import PersistentTile
+
+
+
+class IHTMLTile(Schema):
+    javascript = schema.List(
+        value_type=schema.TextLine(title=u"Javascript"),
+        title= u"Javascript",
+        description=u"Add javascript to load",
+        required=False
+    )
+
+    source_text = schema.SourceText(
+        title= u"HTML",
+        description=u"This HTML will be rendered by the tile, use for embed or javascript",
+        required=True
+    )
 
 
 
@@ -12,13 +30,6 @@ class HTMLTile(PersistentTile):
     """HTML tile."""
 
     implements(IHTMLTile)
-
-    def browserDefault(self, request):
-        """By default, tiles render themselves with no browser-default view
-        """
-        import pdb; pdb.set_trace()
-        return self, ()
-
 
     def __call__(self):
         html = self.data.get('source_text', u'')
