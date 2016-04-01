@@ -28,9 +28,9 @@
 
 
 .for(@colors, {
-  .mosaicColor-@{i},
-    .color-@{i} {
-        background-color: @value;
+.mosaicColor-@{value},
+    .color-@{value} {
+        background-color: @@value;
     }
 });
 
