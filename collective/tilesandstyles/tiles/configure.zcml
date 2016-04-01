@@ -45,6 +45,30 @@
 
 
 
+
+    <plone:tile
+        name="tilesandstyles.html"
+        title="HTML tile"
+        description='Raw HTML'
+        permission="zope2.View"
+        add_permission="plone.app.tiles.AddTile"
+        class=".html.HTMLTile"
+        schema=".html.IHTMLTile"
+        for="*"
+        />
+
+
+    <plone:tile
+        name="tilesandstyles.iframe"
+        title="Responsive iframe tile"
+        description=''
+        permission="zope2.View"
+        add_permission="plone.app.tiles.AddTile"
+        class=".youtube.YoutubeTile"
+        schema=".youtube.IYoutubeTile"
+        for="*"
+        />
+
   <plone:tile
       name="tilesandstyles.existingcontent"
       title="Existing content with custom views"
