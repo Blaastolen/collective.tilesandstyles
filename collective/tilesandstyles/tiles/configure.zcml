@@ -64,8 +64,8 @@
         description=''
         permission="zope2.View"
         add_permission="plone.app.tiles.AddTile"
-        class=".youtube.YoutubeTile"
-        schema=".youtube.IYoutubeTile"
+        class=".iframe.IFrameTile"
+        schema=".iframe.IIFrameTile"
         for="*"
         />
 

@@ -4,6 +4,7 @@ from zope import schema
 
 from plone.tiles import PersistentTile
 from zope.interface import implements
+from plone.supermodel.model import Schema
 
 
 
