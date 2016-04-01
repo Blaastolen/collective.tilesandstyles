@@ -15,8 +15,7 @@
 
 .-(@i: length(@colors)) when (@i > 0) {
      @name: extract(@colors, @i);
-     &.mosaic-color-@{name} {background: @@name}
-     &.color-@{name} {background: @@name}
+     .mosaic-color-@{name} {background: @@name}
      .-((@i - 1));
  } .-;
 
