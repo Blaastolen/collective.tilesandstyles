@@ -12,13 +12,12 @@
                              item_title_or_id item/title_or_id;
                              item_object item/getObject;
                              item_url item/getURL;
-                             item_section item/sections;
 
                              item_type item/Type;
                              item_image item_object/image|nothing;
                              item_creator item/Creator;
                              item_description item/Description;
-                             item_class python: item_image and 'highlightbox highlightimage visualIEFloatFix' or 'highlightbox visualIEFloatFix '+item_section;
+                             item_class python: item_image and 'highlightbox highlightimage visualIEFloatFix' or 'highlightbox visualIEFloatFix';
                              item_style python: item_image and 'background-image: url(%s/@@images/image)'%item_url or '';
                              item_modified item/ModificationDate">
         <div class="highlightbox visualIEFloatFix"
@@ -28,7 +27,7 @@
           <a href="#"
 
              tal:attributes="href item_url; style item_style;">
-          <h2 tal:attributes="class python: item_image and '' or item_section"
+          <h2
                tal:content="item_title_or_id">
               Item Title
           </h2>

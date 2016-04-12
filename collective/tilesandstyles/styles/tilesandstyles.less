@@ -10,30 +10,29 @@
 @orange: #F1880E;
 @gray: #404040;
 
+@colors: darkgreen, @darkgreen, yellow, @yellow, turquoise, @turquoise, blue, @blue, brown, @brown, red, @red, lightgreen, @lightgreen, purple, @purple, orange, @orange, gray, @gray;
+
+
 .for(@list, @code) {
     & {
         .loop(@i:1) when (@i =< length(@list)) {
-            @value: extract(@list, @i);
-
+            @name: extract(@list, @i);
+            @color: extract(@list, @i+1);
             @code();
 
-            .loop(@i + 1);
+            .loop(@i + 2);
         }
 
         .loop();
     }
 }
 
-@colors: darkgreen, yellow, turquoise, blue, brown, red, lightgreen, purple, orange;
-
-
 .for(@colors, {
-  .mosaicColor-@{i},
-    .color-@{i} {
-        background-color: @value;
+    .mosaic-color-@{name},
+    .color-@{name}-test {
+        background-color: @color;
     }
 });
-
 
 .highlightbox{
     padding: 1em;
@@ -91,37 +90,36 @@
  overflow-y:hidden;
  -webkit-overflow-scrolling: touch;
  position: relative;
-  height: 300px;
+  height: 200px;
   width: 100%;
 
 
   .horisontallistingbox{
-    width: 210px;
-    height: 300px;
+    width: 130px;
+    height: 200px;
     float: left;
     position: relative;
-    padding-right: 10px;
+    padding-right: 30px;
     display: inline-block;
     a{
       display: block;
       height: 100%;
-      width: 300px;
+      width: 150px;
     }
     div.image{
-      height: 220px;
-      width: 200px;
+      height: 150px;
+      width: 100px;
       background-size: cover;
       background-position: 50%;
       background-repeat: no-repeat;
     }
     h2{
-      background-color: lighten(@gray,65%);
-      font-size: 110%;
-      width: 200px;
+      font-size: 85%;
+      width: 100px;
       height: 80px;
       overflow: hidden;
       margin: 0;
-      vertical-align: middle;;
+      vertical-align: top;
       display: table-cell;
       padding: 1ex;
       margin-top: 20px;
@@ -130,6 +128,23 @@
 }
 
 
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /*
 == jquery thumbnail/image scroller ==
