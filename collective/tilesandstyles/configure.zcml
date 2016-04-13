@@ -5,6 +5,7 @@
     i18n_domain="collecive.tilesandstyles">
 
     <include package=".tiles" />
+    <include package=".portlet" />
 
     <browser:resourceDirectory
       name="tilesandstyles"

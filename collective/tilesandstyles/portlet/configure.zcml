@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plone">
+
+    <include package="plone.app.portlets" />
+
+
+     <plone:portlet
+         name="collective.tilesandstyles.MosaicContentPortlet"
+         interface=".contentportlet.IContentPortlet"
+         assignment=".contentportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="plone.app.portlets.ManagePortlets"
+         renderer=".contentportlet.Renderer"
+         addview=".contentportlet.AddForm"
+         editview=".contentportlet.EditForm"
+         />
+
+</configure>

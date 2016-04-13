@@ -1,0 +1,15 @@
+<html tal:omit-tag=""
+    tal:condition="nocall:view/content"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:tal="http://xml.zope.org/namespaces/tal">
+    <div id="contentportlet"
+         class="portletContent" style="width:100%;">
+    </div>
+    <script>
+      $.get( "<tal:re tal:replace='view/content/absolute_url' />", function( data ) {
+      var source = $(data);
+      $( "#contentportlet" ).html( source.find('#content').html() );
+      });
+
+    </script>
+</html>
