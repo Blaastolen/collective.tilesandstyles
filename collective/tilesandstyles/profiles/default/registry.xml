@@ -117,6 +117,17 @@
 </records>
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.gray">
+  <value key="name">color-gray</value>
+  <value key="category">tile</value>
+  <value key="label">Background gray</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
          prefix="plone.app.mosaic.formats.brown">
   <value key="name">color-brown</value>
   <value key="category">tile</value>
@@ -185,6 +196,7 @@
     <element>color-lightgreen</element>
     <element>color-purple</element>
     <element>color-orange</element>
+    <element>color-gray</element>
   </value>
 </record>
 
@@ -277,6 +289,8 @@
   </field>
   <value>
     <element>tilesandstyles</element>
+    <element>jcarousel</element>
+    <element>thumbnailscroller</element>
   </value>
 </record>
 <record name="plone.resources/tilesandstyles.conf" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="conf">
@@ -330,6 +344,130 @@
   <value>++resource++tilesandstyles/tilesandstyles.js</value>
 </record>
 <record name="plone.resources/tilesandstyles.url" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="url">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Resources base URL</title>
+  </field>
+  <value></value>
+</record>
+
+
+
+
+
+<record name="plone.resources/jcarousel.conf" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="conf">
+  <field type="plone.registry.field.Text">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Should be accessible on @@getWCconfig?id=name</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Configuration in JSON for the widget</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/jcarousel.css" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="css">
+  <field type="plone.registry.field.List">
+    <default/>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">CSS/LESS files</title>
+    <value_type type="plone.registry.field.ASCIILine">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">URL</title>
+    </value_type>
+  </field>
+  <value>
+    <element>++resource++tilesandstyles/jquery.jcarousel.less</element>
+  </value>
+</record>
+<record name="plone.resources/jcarousel.deps" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="deps">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Comma separated values of resource for shim</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Dependencies for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/jcarousel.export" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="export">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Export vars for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/jcarousel.init" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="init">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Init instruction for shim</title>
+  </field>
+  <value></value>
+</record>
+<record name="plone.resources/jcarousel.js" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="js">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Main js file</title>
+  </field>
+  <value>++resource++tilesandstyles/jquery.jcarousel.min.js</value>
+</record>
+<record name="plone.resources/jcarousel.url" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="url">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Resources base URL</title>
+  </field>
+  <value></value>
+</record>
+
+
+
+
+
+<record name="plone.resources/thumbnailscroller.conf" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="conf">
+  <field type="plone.registry.field.Text">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Should be accessible on @@getWCconfig?id=name</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Configuration in JSON for the widget</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/thumbnailscroller.css" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="css">
+  <field type="plone.registry.field.List">
+    <default/>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">CSS/LESS files</title>
+    <value_type type="plone.registry.field.ASCIILine">
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">URL</title>
+    </value_type>
+  </field>
+  <value>
+    <element>++resource++tilesandstyles/thumbnail.scroller.less</element>
+  </value>
+</record>
+<record name="plone.resources/thumbnailscroller.deps" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="deps">
+  <field type="plone.registry.field.ASCIILine">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Comma separated values of resource for shim</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Dependencies for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/thumbnailscroller.export" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="export">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Export vars for shim</title>
+  </field>
+  <value/>
+</record>
+<record name="plone.resources/thumbnailscroller.init" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="init">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Init instruction for shim</title>
+  </field>
+  <value></value>
+</record>
+<record name="plone.resources/thumbnailscroller.js" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="js">
+  <field type="plone.registry.field.ASCIILine">
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Main js file</title>
+  </field>
+  <value>++resource++tilesandstyles/thumbnail.scroller.min.js</value>
+</record>
+<record name="plone.resources/thumbnailscroller.url" interface="Products.CMFPlone.interfaces.resources.IResourceRegistry" field="url">
   <field type="plone.registry.field.ASCIILine">
     <required>False</required>
     <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Resources base URL</title>

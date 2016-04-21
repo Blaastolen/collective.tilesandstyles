@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body>
+    <div class="horisontallisting horisontalnewslisting">
+      <div class="newsheading">
+        <h3>Latest news</h3>
+        <a href="news/">Go to news archive</a>
+      </div>
+    <ul tal:define="original_context nocall:options/original_context|context;
+                    toLocalizedTime nocall:original_context/@@plone/toLocalizedTime">
+    <li class="horisontallistingbox" tal:repeat="item context">
+      <tal:block tal:define="item_url item/getURL;
+                             item_title_or_id item/title_or_id;
+                             item_object item/getObject;
+                             item_url item/getURL;
+
+                             item_type item/Type;
+                             item_image item_object/image|nothing;
+                             item_creator item/Creator;
+                             item_description item/Description;
+                             item_class python: item_image and 'highlightbox visualIEFloatFix' or 'highlightbox visualIEFloatFix ';
+                             item_style python: item_image and 'background-image: url(%s/@@images/image)'%item_url or '';
+                             item_modified item/ModificationDate;
+                             item_effecrtive item/effective">
+
+
+          <a href="#"
+             tal:attributes="href item_url;">
+             <span style="font-size: 80%;" class="newsDate" tal:content="python: toLocalizedTime(item_modified)">
+               August 16, 2001 at 23:35:59
+            </span>
+
+          <h2
+               tal:content="item_title_or_id">
+              Item Title
+          </h2>
+          <p class="tileBody">
+             <div class="articleDescription" tal:content="item_object/Description">
+                                     Description
+                                 </div>
+          </p>
+          </a>
+          <div style="clear: both;" class="visualClear"><!-- --></div>
+
+      </tal:block>
+  </li>
+</ul>
+</div>
+  </body>
+</html>

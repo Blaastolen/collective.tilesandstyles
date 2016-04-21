@@ -24,6 +24,8 @@ def availableListingViewsVocabulary(context):
     listing_views = {
         'coverimage_listing': u'Cover Image Listing',
         'horisontal_listing': u'Horisontal Listing',
+        'carousel': u'Carousel',
+        'horisontal_newslisting': u'Horisontal News Listing',
         'news_listing': u'News listing',
         'listing_view': u'Listing view',
         'summary_view': u'Summary view',

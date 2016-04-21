@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body>
+    <div class="carousel arrows" data-transition="slide" data-paginate data-autoplay data-interval="5000">
+    <div tal:repeat="item context">
+      <tal:block tal:define="item_url item/getURL;
+                             item_title_or_id item/title_or_id;
+                             item_object item/getObject;
+                             item_url item/getURL;
+
+                             item_type item/Type;
+                             item_image item_object/image|nothing;
+                             item_creator item/Creator;
+                             item_description item/Description;
+                             item_class python: item_image and 'highlightbox visualIEFloatFix' or 'highlightbox visualIEFloatFix ';
+                             item_style python: item_image and 'background-image: url(%s/@@images/image)'%item_url or '';
+                             item_modified item/ModificationDate">
+
+
+          <a href="#"
+             tal:attributes="href item_url;">
+             <div class="image"
+                tal:attributes="style item_style;"></div>
+
+            <h2
+                 tal:content="item_title_or_id">
+                Item Title
+            </h2>
+          </a>
+          <div style="clear: both;" class="visualClear"><!-- --></div>
+
+      </tal:block>
+  </div>
+</div>
+<script>
+  $( ".carousel" ).carousel();
+</script>
+  </body>
+</html>

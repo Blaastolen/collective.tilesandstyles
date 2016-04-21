@@ -10,6 +10,7 @@
     <include package="plone.app.tiles" />
 
 
+
     <browser:page
         name="coverimage_listing"
         for="*"
@@ -33,6 +34,23 @@
         layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
         permission="zope2.View"
         template="templates/horisontallisting.pt"
+        />
+
+      <browser:page
+          name="carousel"
+          for="*"
+          layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+          permission="zope2.View"
+          template="templates/carousel.pt"
+          />
+
+
+    <browser:page
+        name="horisontal_newslisting"
+        for="*"
+        layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+        permission="zope2.View"
+        template="templates/horisontalnewslisting.pt"
         />
 
 
