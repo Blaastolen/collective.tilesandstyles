@@ -7,7 +7,7 @@
       i18n:domain="plone">
   <body>
       <div class="horisontallisting">
-        <h1 tal:replace="context/title">
+        <h1 tal:content="context/title">
           Title
         </h1>
       <ul>
