@@ -18,10 +18,10 @@
                              item_creator item/Creator;
                              item_description item/Description;
                              item_start python:(item.start or item.StartDate) if item_type == 'Event' else None;
-                             item_start_date item_start/date  if item_type == 'Event' else None;
+                             item_start_date python: item_start.date if item_type == 'Event' else None;
 
                              item_end python:(item.end or item.EndDate) if item_type == 'Event' else None;
-                             item_end_date item_end/date  if item_type == 'Event' else None;
+                             item_end_date python: item_end.date if item_type == 'Event' else None;
                              item_sametime python: item_start == item_end;
                              item_samedate python: item_start_date == item_end_date;
                              item_class python: item_image and 'highlightbox highlightimage visualIEFloatFix' or 'highlightbox visualIEFloatFix';
