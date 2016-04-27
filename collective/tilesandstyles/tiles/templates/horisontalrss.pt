@@ -28,11 +28,6 @@
                  tal:content="item_title_or_id">
                 Item Title
             </h2>
-            <p tal:condition="not:item_image" class="tileBody">
-               <div class="articleDescription" tal:content="item/summary">
-                                       Description
-                                   </div>
-            </p>
             </a>
             <div style="clear: both;" class="visualClear"><!-- --></div>
 
