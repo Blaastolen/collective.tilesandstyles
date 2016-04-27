@@ -20,7 +20,7 @@
                              item_creator item/Creator;
                              item_description item/Description;
                              item_class python: item_image and 'highlightbox visualIEFloatFix' or 'highlightbox visualIEFloatFix ';
-                             item_style python: item_image and 'background-image: url(%s/@@images/image)'%item_url or '';
+                             item_style python: item_image and 'background-image: url(%s/@@images/image/large)'%item_url or '';
                              item_modified item/ModificationDate">
 
 
@@ -29,7 +29,7 @@
              <div class="image"
                 tal:attributes="style item_style;"></div>
 
-          <h2 
+          <h2
                tal:content="item_title_or_id">
               Item Title
           </h2>
