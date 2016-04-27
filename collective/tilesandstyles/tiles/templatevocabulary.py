@@ -41,6 +41,22 @@ def availableListingViewsVocabulary(context):
 directlyProvides(availableListingViewsVocabulary, IVocabularyFactory)
 
 
+def availableRSSViewsVocabulary(context):
+    """Get available views for listing content as vocabulary"""
+    listing_views = {
+        'defaultrsstile': u'Default RSS',
+        'horisontalrss': u'Horisontal RSS image listing',
+    }
+    sorted = listing_views.items()
+    sorted.sort(lambda a, b: cmp(a[1], b[1]))
+    voc = []
+    for key, label in sorted:
+        voc.append(SimpleVocabulary.createTerm(key, key, label))
+    return SimpleVocabulary(voc)
+
+directlyProvides(availableRSSViewsVocabulary, IVocabularyFactory)
+
+
 def availableContentViewsClassesVocabulary(context):
     """Get available views for listing content as vocabulary"""
     listing_views = {

@@ -9,6 +9,7 @@
       <element>tilesandstyles.search</element>
       <element>tilesandstyles.existingcontent</element>
       <element>tilesandstyles.html</element>
+      <element>tilesandstyles.rss</element>
       <element>tilesandstyles.iframe</element>
 
     </value>
@@ -48,6 +49,21 @@
        interface="plone.app.mosaic.interfaces.ITile">
 <value key="name">tilesandstyles.html</value>
 <value key="label">HTML</value>
+<value key="category">advanced</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">30</value>
+</records>
+
+
+<records prefix="plone.app.mosaic.app_tiles.tilesandstyles_rss_tile"
+       interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.rss</value>
+<value key="label">RSS with custom template</value>
 <value key="category">advanced</value>
 <value key="tile_type">app</value>
 <value key="default_value"></value>

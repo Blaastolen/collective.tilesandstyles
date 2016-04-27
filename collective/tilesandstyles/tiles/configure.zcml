@@ -61,6 +61,30 @@
           template="templates/existingcontent_view.pt"
           />
 
+      <browser:page
+          name="defaultrsstile"
+          for="*"
+          permission="zope2.View"
+          template="templates/rss.pt"
+          />
+      <browser:page
+          name="horisontalrss"
+          for="*"
+          permission="zope2.View"
+          template="templates/horisontalrss.pt"
+          />
+
+
+      <plone:tile
+          name="tilesandstyles.rss"
+          title="RSS tile with custom template"
+          description='RSS tile with custom template'
+          permission="zope2.View"
+          add_permission="plone.app.tiles.AddTile"
+          class=".rss.RSSTile"
+          schema=".rss.IRSSTile"
+          for="*"
+          />
 
 
 
@@ -121,6 +145,10 @@
       name="Available Content View Classes"
     />
 
+    <utility
+      component="collective.tilesandstyles.tiles.templatevocabulary.availableRSSViewsVocabulary"
+      name="Available RSS View Classes"
+    />
 
 
 
