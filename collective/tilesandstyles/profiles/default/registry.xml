@@ -213,9 +213,21 @@
     <element>color-purple</element>
     <element>color-orange</element>
     <element>color-gray</element>
+    <element>border</element>
   </value>
 </record>
 
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.border">
+  <value key="name">border</value>
+  <value key="category">tile</value>
+  <value key="label">Border</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
 
 <record name="plone.bundles/tilesandstyles.compile" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="compile">
   <field type="plone.registry.field.Bool">
