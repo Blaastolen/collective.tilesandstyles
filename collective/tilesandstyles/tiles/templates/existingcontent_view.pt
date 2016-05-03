@@ -8,13 +8,15 @@
                     item_url context/absolute_url;
                     item_image context/image|nothing;
                     item_class python: item_image and 'highlightbox highlightimage' or 'highlightbox '+ view_class;
-                    item_style python: item_image and 'background-image: url(%s/image)'%item_url or '';">
+                    item_style python: item_image and 'background-image: url(%s@@image/image/large)'%item_url or '';">
     <div tal:attributes="class item_class;" class="highlightbox">
       <div>
       <a href="#"
          tal:attributes="href item_url; style item_style;">
+         <div class="tilelabel">
       <h2 tal:attributes="class python: item_image and '' or view_class" tal:content="context/Title">Headline</h2>
       <p tal:condition="not:item_image"  tal:content="context/Description">Description</p>
+    </div>
       </a>
     </div>
     </div>
