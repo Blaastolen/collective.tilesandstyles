@@ -17,11 +17,11 @@
                              item_image item_object/image|nothing;
                              item_creator item/Creator;
                              item_description item/Description;
-                             item_start python:(item.start or item.StartDate) if item_type == 'Event' else None;
-                             item_start_date python: item_start.date if item_type == 'Event' else None;
+                             item_start python:(item_object.start) if item_type == 'Event' else None;
+                             item_start_date python: item_start.date() if item_type == 'Event' else None;
 
-                             item_end python:(item.end or item.EndDate) if item_type == 'Event' else None;
-                             item_end_date python: item_end.date if item_type == 'Event' else None;
+                             item_end python:(item_object.end) if item_type == 'Event' else None;
+                             item_end_date python: item_end.date() if item_type == 'Event' else None;
                              item_sametime python: item_start == item_end;
                              item_samedate python: item_start_date == item_end_date;
                              item_class python: item_image and 'highlightbox highlightimage visualIEFloatFix' or 'highlightbox visualIEFloatFix';
@@ -51,7 +51,7 @@
                         i18n:translate="label_event_byline_samedate">
                        <abbr class="dtstart"
                              tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start)"
+                             tal:content="python:toLocalizedTime(item_start,long_format=1)"
                              i18n:name="start">from date</abbr> from
                        <abbr class="dtstart"
                              tal:attributes="title python:item_start"
@@ -67,18 +67,16 @@
                         from
                              <abbr class="dtstart"
                              tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start,long_format=1)"
+                             tal:content="python:toLocalizedTime(item_start,long_format=0)"
                              i18n:name="start">from date</abbr> to
                        <abbr class="dtend"
                              tal:attributes="title python:item_end"
                              tal:content="python:toLocalizedTime(item_end,long_format=1)"
                              i18n:name="end">to date</abbr>
                   </span>
-                   <span tal:condition="python: item_type == 'Event' and item.location"
-                        i18n:translate="label_event_byline_location">&mdash;
+                   <span tal:condition="python: item_type == 'Event' and item.location">&mdash;
                        <span tal:content="string:${item/location}"
-                             class="location"
-                             i18n:name="location">Oslo</span>,
+                             class="location">Oslo</span>
                   </span>
 
               </div>
