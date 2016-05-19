@@ -44,7 +44,7 @@
                   <span tal:condition="python: item_type == 'Event'">
                     <abbr tal:content="python:calendarhelper.day_name(item_start.weekday())">Day</abbr>
                     <abbr tal:content="item_start/day">Date</abbr>
-                    <abbr tal:content="python:calendarhelper.month_name(item_start.month">Day</abbr>
+                    <abbr tal:content="python:calendarhelper.month_name(item_start.month)">Day</abbr>
                     <abbr tal:content="item_start/hour">Hour</abbr>:<abbr tal:content="item_start/minute">Minute</abbr>:
 
                   </span>
