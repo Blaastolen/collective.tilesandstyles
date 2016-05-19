@@ -13,6 +13,7 @@
                              item_object item/getObject;
                              item_url item/getURL;
                              toLocalizedTime nocall:item_object/@@plone/toLocalizedTime;
+                             calendarhelper item_object/@@tilesandstyles-calendarhelper;
                              item_type item/Type;
                              item_image item_object/image|nothing;
                              item_creator item/Creator;
@@ -40,39 +41,12 @@
                      tal:content="item_title_or_id">
                     Item Title
                 </h2>
-                  <span tal:condition="python: item_type == 'Event' and item_sametime"
-                        i18n:translate="label_event_byline_onlyfrom">
-                       <abbr class="dtstart"
-                             tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start,long_format=1)"
-                             i18n:name="start">from date</abbr>
-                  </span>
-                  <span tal:condition="python: item_type == 'Event' and item_samedate and not item_sametime"
-                        i18n:translate="label_event_byline_samedate">
-                       <abbr class="dtstart"
-                             tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start,long_format=1)"
-                             i18n:name="start">from date</abbr> from
-                       <abbr class="dtstart"
-                             tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start,time_only=1)"
-                             i18n:name="starttime">from time</abbr> to
-                       <abbr class="dtend"
-                             tal:attributes="title python:item_end"
-                             tal:content="python:toLocalizedTime(item_end,time_only=1)"
-                             i18n:name="end">to time</abbr>
-                  </span>
-                  <span tal:condition="python: item_type == 'Event' and not item_samedate and not item_sametime"
-                        i18n:translate="label_event_byline">
-                        from
-                             <abbr class="dtstart"
-                             tal:attributes="title python:item_start"
-                             tal:content="python:toLocalizedTime(item_start,long_format=0)"
-                             i18n:name="start">from date</abbr> to
-                       <abbr class="dtend"
-                             tal:attributes="title python:item_end"
-                             tal:content="python:toLocalizedTime(item_end,long_format=1)"
-                             i18n:name="end">to date</abbr>
+                  <span tal:condition="python: item_type == 'Event'">
+                    <abbr tal:content="python:calendarhelper.day_name(item_start.weekday())">Day</abbr>
+                    <abbr tal:content="item_start/day">Date</abbr>
+                    <abbr tal:content="python:calendarhelper.day_an,e(item_start.month">Day</abbr>
+                    <abbr tal:content="item_start/hour">Hour</abbr>:<abbr tal:content="item_start/minute">Minute</abbr>:
+
                   </span>
                    <span tal:condition="python: item_type == 'Event' and item.location">&mdash;
                        <span tal:content="string:${item/location}"

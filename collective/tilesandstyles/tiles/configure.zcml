@@ -11,6 +11,15 @@
 
 
 
+    <browser:page name="tilesandstyles-calendarhelper"
+      for="*"
+      class=".calendar_helper.CalendarHelperView"
+      allowed_attributes="month_name day_name"
+      permission="zope2.View"
+      />
+
+
+
     <browser:page
         name="coverimage_listing"
         for="*"
