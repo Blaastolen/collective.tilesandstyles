@@ -109,6 +109,21 @@
         />
 
 
+
+    <plone:tile
+        name="tilesandstyles.accordion"
+        title="Accordion tile"
+        description='Accordion Tile'
+        permission="zope2.View"
+        add_permission="plone.app.tiles.AddTile"
+        class=".accordion.AccordionTile"
+        schema=".accordion.IAccordionTile"
+        template="templates/accordion.pt"
+        for="*"
+        />
+
+
+
     <plone:tile
         name="tilesandstyles.iframe"
         title="Responsive iframe tile"

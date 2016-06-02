@@ -6,4 +6,8 @@ $(window).load(function(){
           $(".horisontallisting").mThumbnailScroller({
             axis:"x" //change to "y" for vertical scroller
           });
+          $(".accordiontile").click(function() {
+            $( this ).find(".accordiontext").toggle();
+          });
+
       });
