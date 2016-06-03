@@ -22,8 +22,7 @@ class IAccordionTile(model.Schema):
                                default=u'')
     text = RichText(
                title=_(u"Accordion Body"),
-               required=True,
-               default=u'')
+               required=True)
 
 
 class AccordionTile(Tile):
