@@ -56,7 +56,7 @@
 <value key="read_only">false</value>
 <value key="settings">true</value>
 <value key="favorite">false</value>
-<value key="rich_text">false</value>
+<value key="rich_text">true</value>
 <value key="weight">70</value>
 </records>
 
