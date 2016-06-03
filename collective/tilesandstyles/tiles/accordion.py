@@ -11,6 +11,7 @@ from plone.tiles import Tile
 from plone.uuid.interfaces import IUUID
 from repoze.xmliter.utils import getHTMLSerializer
 from zope import schema
+from plone.app.textfield import RichText
 from zope.browser.interfaces import IBrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
@@ -19,7 +20,7 @@ class IAccordionTile(model.Schema):
                                title=_(u"Title"),
                                required=True,
                                default=u'')
-    text = schema.Text(
+    text = RichText(
                title=_(u"Accordion Body"),
                required=True,
                default=u'')
