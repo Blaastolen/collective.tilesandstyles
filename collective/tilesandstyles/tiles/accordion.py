@@ -20,8 +20,7 @@ class IAccordionTile(model.Schema):
                                title=_(u"Title"),
                                required=True,
                                default_mime_type='text/x-rst',
-                               output_mime_type='text/x-html',
-                               allowed_mime_types=('text/x-rst', 'text/structured',),                               
+                               allowed_mime_types=('text/x-rst', 'text/structured',),
                                default=u'')
     text = RichText(
                title=_(u"Accordion Body"),
