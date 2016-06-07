@@ -7,7 +7,8 @@ from plone.app.uuid.utils import uuidToObject
 from plone.app.vocabularies.catalog import CatalogSource as CatalogSourceBase
 from plone.memoize.view import memoize
 from plone.supermodel import model
-from plone.tiles import Tile
+from plone.tiles import PersistentTile
+from plone.app.textfield import RichText
 from plone.uuid.interfaces import IUUID
 from repoze.xmliter.utils import getHTMLSerializer
 from zope import schema
@@ -19,12 +20,12 @@ class IAccordionTile(model.Schema):
                                title=_(u"Title"),
                                required=True,
                                default=u'')
-    text = schema.Text(
+    text = RichText(
                title=_(u"Accordion Body"),
                required=True,
                default=u'')
 
 
-class AccordionTile(Tile):
+class AccordionTile(PersistentTile):
     """Existing content tile
     """
