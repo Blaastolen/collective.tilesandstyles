@@ -54,11 +54,6 @@
                   </span>
 
               </div>
-          <p tal:condition="not:item_image" class="tileBody">
-             <div class="articleDescription" tal:content="item_object/Description">
-                                     Description
-                                 </div>
-          </p>
           </a>
         </div>
           <div style="clear: both;" class="visualClear"><!-- --></div>
