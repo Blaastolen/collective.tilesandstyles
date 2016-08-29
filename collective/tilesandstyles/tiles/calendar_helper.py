@@ -17,8 +17,8 @@ class CalendarHelperView(BrowserView):
 
 
     def day_name(self, day_no):
-        if day_no == 7:
-            day_no = 1
+        if day_no == 6:
+            day_no = 0
         else:
             day_no +=1
         return translate(weekdayname_msgid(str(day_no)),
