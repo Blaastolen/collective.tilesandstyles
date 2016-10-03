@@ -89,7 +89,7 @@
           title="RSS tile with custom template"
           description='RSS tile with custom template'
           permission="zope2.View"
-          add_permission="plone.app.tiles.AddTile"
+          add_permission="cmf.ModifyPortalContent"
           class=".rss.RSSTile"
           schema=".rss.IRSSTile"
           for="*"
@@ -102,7 +102,7 @@
         title="HTML tile"
         description='Raw HTML'
         permission="zope2.View"
-        add_permission="plone.app.tiles.AddTile"
+        add_permission="cmf.ModifyPortalContent"
         class=".html.HTMLTile"
         schema=".html.IHTMLTile"
         for="*"
@@ -115,7 +115,7 @@
         title="Accordion tile"
         description='Accordion Tile'
         permission="zope2.View"
-        add_permission="plone.app.tiles.AddTile"
+        add_permission="cmf.ModifyPortalContent"
         class=".accordion.AccordionTile"
         schema=".accordion.IAccordionTile"
         template="templates/accordion.pt"
@@ -129,7 +129,7 @@
         title="Responsive iframe tile"
         description=''
         permission="zope2.View"
-        add_permission="plone.app.tiles.AddTile"
+        add_permission="cmf.ModifyPortalContent"
         class=".iframe.IFrameTile"
         schema=".iframe.IIFrameTile"
         for="*"
@@ -152,7 +152,7 @@
       title="Limited Search"
       description='A search field'
       permission="zope2.View"
-      add_permission="plone.app.tiles.AddTile"
+      add_permission="cmf.ModifyPortalContent"
       class=".search.SearchTile"
       schema=".search.ISearchTile"
       template="templates/search.pt"
