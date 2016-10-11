@@ -11,7 +11,7 @@
                     item_style python: item_image and 'background-image: url(%s/@@images/image/large)'%item_url or '';">
     <div tal:attributes="class item_class;" class="highlightbox">
       <div>
-      <a href="#"
+      <a href="#" class="highlightlink"
          tal:attributes="href item_url; style item_style;">
          <div class="tilelabel">
       <h2 tal:attributes="class python: item_image and '' or view_class" tal:content="context/Title">Headline</h2>
