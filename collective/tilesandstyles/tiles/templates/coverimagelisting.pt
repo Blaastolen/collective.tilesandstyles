@@ -34,7 +34,7 @@
              tal:attributes="class item_class;">
              <div>
           <a href="#"
-
+             class="highlightlink"
              tal:attributes="href item_url; style item_style;">
              <div class="tilelabel">
                 <h2
