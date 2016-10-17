@@ -7,7 +7,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="plone">
   <body>
-    <div class="carousel arrows" data-transition="slide" data-paginate data-autoplay data-interval="5000">
+    <div class="carousel arrows" data-transition="slide" data-paginate data-autoplay data-interval="8000">
     <div tal:repeat="item context">
       <tal:block tal:define="item_url item/getURL;
                              item_title_or_id item/title_or_id;
