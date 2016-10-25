@@ -7,7 +7,7 @@
   <body tal:define="view_class options/view_class;
                     item_url context/absolute_url;
                     item_image context/image|nothing;
-                    item_class python: item_image and 'highlightbox highlightimage' or 'highlightbox '+ view_class;
+                    item_class python: item_image and 'highlightbox highlightimage ' + view_class or 'highlightbox '+ view_class;
                     item_style python: item_image and 'background-image: url(%s/@@images/image/large)'%item_url or '';">
     <div tal:attributes="class item_class;" class="highlightbox">
       <div>
