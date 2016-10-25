@@ -53,16 +53,6 @@
 
 });
 
-.highlightbox{
-    padding: 1em;
-    background-color: @gray;
-    margin-bottom: .5em;
-    color: white !important;
-}
-
-.highlightbox div{
-  position: relative;
-}
 
 .highlightbox,
 .horisontallisting {
@@ -72,15 +62,22 @@
     }
 }
 
-.highlightbox{
+.highlightbox a{
+  display: block;
   border: 1px solid rgba(208, 208, 208, 0.91);
   box-shadow: 0px 6px 6px -3px #DFDFDF;
+  padding: 1em;
+  background-color: @gray;
+  margin-bottom: .5em;
+  color: white !important;
+
 }
-.highlightbox:hover,
+.highlightbox a:hover,
 .horisontallisting:hover{
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
 }
 
+.highlightbox,
 .highlightimage{
     font-size: 100%;
      position: relative;
