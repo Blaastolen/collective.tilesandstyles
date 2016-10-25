@@ -61,6 +61,16 @@ def availableContentViewsClassesVocabulary(context):
     """Get available views for listing content as vocabulary"""
     listing_views = {
         'red': u'Red',
+        'darkgreen': u'Darkgreen',
+        'yellow': u'Yellow',
+        'turquoise': u'Turquoise',
+        'blue': u'Blue',
+        'brown': u'Brown',
+        'red': u'Red',
+        'lightgreen': u'Lightgreen',
+        'purple': u'Purple',
+        'orange': u'Orange',
+        'gray': u'Gray',
     }
     sorted = listing_views.items()
     sorted.sort(lambda a, b: cmp(a[1], b[1]))

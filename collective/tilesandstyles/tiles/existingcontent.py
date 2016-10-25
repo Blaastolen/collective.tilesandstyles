@@ -33,6 +33,7 @@ class IExistingContentTile(model.Schema):
                               required=True)
     view_class = schema.Choice(title=_(u"Display Class"),
                               source=_(u"Available Content View Classes"),
+                              default="gray",
                               required=True)
 
 
