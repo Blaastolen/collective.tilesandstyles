@@ -8,7 +8,7 @@
       i18n:domain="plone">
   <body>
     <div class="hero" tal:define="scales view/@@images;
-                     image python: scales.scale('image', scale='large')"
+                     image python: scales.scale('image', scale='coverimage')"
                      tal:attributes="style python: 'background-image: url(%s) !important'%image.url">
         <h1 tal:content="view/data/title|python: ''">Title</h1>
     </div>
