@@ -12,9 +12,42 @@
       <element>tilesandstyles.rss</element>
       <element>tilesandstyles.iframe</element>
       <element>tilesandstyles.accordion</element>
+      <element>tilesandstyles.quote</element>
+      <element>tilesandstyles.hero</element>
+      <element>tilesandstyles.button</element>
 
     </value>
   </record>
+
+
+  <records prefix="plone.app.mosaic.app_tiles.tilesandstyles_button"
+       interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.button</value>
+<value key="label">Button</value>
+<value key="category">advanced</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">50</value>
+</records>
+
+
+  <records prefix="plone.app.mosaic.app_tiles.tilesandstyles_hero"
+       interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.hero</value>
+<value key="label">Hero</value>
+<value key="category">advanced</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">50</value>
+</records>
 
 
   <records prefix="plone.app.mosaic.app_tiles.tilesandstyles_search"
@@ -45,6 +78,20 @@
 <value key="weight">60</value>
 </records>
 
+
+<records prefix="plone.app.mosaic.app_tiles.tilesandstyles_quote"
+     interface="plone.app.mosaic.interfaces.ITile">
+<value key="name">tilesandstyles.quote</value>
+<value key="label">Quote</value>
+<value key="category">advanced</value>
+<value key="tile_type">app</value>
+<value key="default_value"></value>
+<value key="read_only">false</value>
+<value key="settings">true</value>
+<value key="favorite">false</value>
+<value key="rich_text">false</value>
+<value key="weight">60</value>
+</records>
 
 <records prefix="plone.app.mosaic.app_tiles.tilesandstyles_accordion"
      interface="plone.app.mosaic.interfaces.ITile">

@@ -181,6 +181,54 @@
   }
 }
 
+
+.quotetile{
+  
+  &:after{ clear: both; }
+  &:before, &:after{ content:""; display:table; }
+  a{
+    display: block;
+  }
+  a:hover, a:focus{
+    text-decoration: none;
+  }
+  blockquote {
+    display: table;
+    margin: 0 0 1em 0;
+    div{display: table-cell;}
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 1.45;
+    
+
+    color: @gray;
+    cite {
+      display: block;
+      color: lighten(@gray, 30%);
+      font-size: 55%;
+      margin-top: .25em;
+    }
+    cite:before {
+      content: "\2014 \2009";
+    }
+  }
+  blockquote:before {
+    display: table-cell;
+    font-family: serif;
+    content: "\201C";
+    font-size: 2em;
+    vertical-align: super;
+    color: lighten(@gray, 20%);
+  }
+}
+
+@media (min-width: 768px){
+  .mosaic-width-full .quotetile blockquote{ font-size: 6em;}
+  .mosaic-width-half .quotetile blockquote{ font-size: 3em;}
+  .mosaic-width-third .quotetile blockquote{ font-size: 2em;}
+
+}
+
 .horisontallisting.horisontalnewslisting{
   color: @blue;
   a{

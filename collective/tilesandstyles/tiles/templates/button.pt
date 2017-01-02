@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+  <body tal:define="view_class view/data/view_class;
+                    item_url view/data/url;
+                    item_class python: 'button '+ view_class;">
+    <div tal:attributes="class item_class;" class="button">
+      <a href="#" tal:attributes="href item_url;">
+         <div class="tilelabel">
+      <h2 tal:content="view/data/title">Headline</h2>
+      </a>
+    </div>
+  </body>
+
+
+</html>

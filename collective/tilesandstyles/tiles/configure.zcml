@@ -71,6 +71,14 @@
           />
 
       <browser:page
+          name="existing_content_button"
+          for="*"
+          permission="zope2.View"
+          template="templates/existingcontent_button_view.pt"
+          />
+
+
+      <browser:page
           name="defaultrsstile"
           for="*"
           permission="zope2.View"
@@ -96,6 +104,31 @@
           />
 
 
+      <plone:tile
+          name="tilesandstyles.button"
+          title="Button tile"
+          description='Button tile, links to a url looking like a button'
+          permission="zope2.View"
+          add_permission="cmf.ModifyPortalContent"
+          class=".button.ButtonTile"
+          schema=".button.IButtonTile"
+          template="templates/button.pt"
+          for="*"
+          />
+
+
+
+      <plone:tile
+          name="tilesandstyles.hero"
+          title="Hero tile"
+          description="Hero tile, needs to be in its't own row. Magic will happen"
+          permission="zope2.View"
+          add_permission="cmf.ModifyPortalContent"
+          class=".hero.HeroTile"
+          schema=".hero.IHeroTile"
+          template="templates/hero.pt"
+          for="*"
+          />
 
     <plone:tile
         name="tilesandstyles.html"
@@ -105,6 +138,18 @@
         add_permission="cmf.ModifyPortalContent"
         class=".html.HTMLTile"
         schema=".html.IHTMLTile"
+        for="*"
+        />
+
+    <plone:tile
+        name="tilesandstyles.quote"
+        title="Quote tile"
+        description='a quote with a link'
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        class=".quote.QuoteTile"
+        schema=".quote.IQuoteTile"
+        template="templates/quote.pt"
         for="*"
         />
 

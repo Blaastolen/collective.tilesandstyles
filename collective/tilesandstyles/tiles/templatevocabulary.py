@@ -9,6 +9,7 @@ def availableContentViewsVocabulary(context):
     """Get available views for listing content as vocabulary"""
     listing_views = {
         'existing_content': u'Cover Image view',
+        'existing_content_button': u'Button Image view',
     }
     sorted = listing_views.items()
     sorted.sort(lambda a, b: cmp(a[1], b[1]))
@@ -22,7 +23,10 @@ directlyProvides(availableContentViewsVocabulary, IVocabularyFactory)
 def availableListingViewsVocabulary(context):
     """Get available views for listing content as vocabulary"""
     listing_views = {
-        'coverimage_listing': u'Cover Image Listing',
+        'coverimage_listing': u'Cover Image Listing 1 per row',
+        'coverimage_listing2': u'Cover Image Listing 2 per row',
+        'coverimage_listing3': u'Cover Image Listing 3 per row',
+        'coverimage_listing4': u'Cover Image Listing 4 per row',
         'horisontal_listing': u'Horisontal Listing',
         'carousel': u'Carousel',
         'horisontal_newslisting': u'Horisontal News Listing',
