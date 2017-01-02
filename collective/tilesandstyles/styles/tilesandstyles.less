@@ -322,15 +322,27 @@ position: absolute;
   }
   .accordionplus{
     position: absolute;
-    color: #DDD;
+    color: @orange;
     display: block;
     right: 0px;
     top: 25%;
-    border: 1px solid #DDD;
     padding: .5ex 1ex;
     margin-top: -.5ex;
+    
+  }
+  .accordionplus:after{
+    content: "+";
   }
 }
+.accordiontile.open{
+  div{
+    display: block;
+  }
+  .accordionplus:after{
+    content: "-";
+  }
+}
+
 .accordiontile:hover{
   cursor: pointer; cursor: hand;
 }

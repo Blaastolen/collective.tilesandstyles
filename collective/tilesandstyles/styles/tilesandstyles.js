@@ -7,7 +7,6 @@ $(window).load(function(){
             axis:"x" //change to "y" for vertical scroller
           });
           $(".accordiontile").click(function() {
-            $( this ).find(".accordiontext").toggle();
+            $( this ).toggleClass("open");
           });
-
       });

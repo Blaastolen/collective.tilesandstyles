@@ -7,7 +7,7 @@
       i18n:domain="plone">
   <body>
       <div class="accordiontile">
-        <h3><span tal:replace="view/data/title" /><span class="accordionplus">+</span></h3>
+        <h3><span tal:replace="view/data/title" /><span class="accordionplus"></span></h3>
         <div class="accordiontext" tal:content="structure view/data/text/output" />
       </div>
   </body>
