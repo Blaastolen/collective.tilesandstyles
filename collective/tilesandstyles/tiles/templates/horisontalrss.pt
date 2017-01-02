@@ -7,9 +7,6 @@
       i18n:domain="plone">
   <body>
       <div class="horisontallisting">
-        <h2 tal:content="context/title">
-          Title
-        </h2>
       <ul>
       <li class="horisontallistingbox" tal:repeat="item context/items">
         <tal:block tal:define="item_url item/url;

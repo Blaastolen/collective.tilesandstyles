@@ -40,8 +40,5 @@ setup(
         'test': ['plone.testing [zca, z2]', 'unittest2'],
     },
     entry_points="""
-    # -*- Entry points: -*-
-    [z3c.autoinclude.plugin]
-    target = plone
     """,
 )
