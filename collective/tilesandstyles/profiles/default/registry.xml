@@ -298,7 +298,7 @@
   <value key="name">bottom-margin</value>
   <value key="category">row</value>
   <value key="label">Margin bottom</value>
-  <value key="action">tile-toggle-class</value>
+  <value key="action">row-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
   <value key="weight">110</value>
@@ -310,7 +310,7 @@
   <value key="name">neg-top-margin</value>
   <value key="category">row</value>
   <value key="label">Negative top margin</value>
-  <value key="action">tile-toggle-class</value>
+  <value key="action">row-toggle-class</value>
   <value key="icon">true</value>
   <value key="favorite">false</value>
   <value key="weight">110</value>
