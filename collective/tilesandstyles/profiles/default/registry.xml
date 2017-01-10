@@ -291,6 +291,30 @@
   <value key="weight">110</value>
 </records>
 
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.border">
+  <value key="name">bottom-margin</value>
+  <value key="category">row</value>
+  <value key="label">Margin bottom</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
+<records interface="plone.app.mosaic.interfaces.IFormat"
+         prefix="plone.app.mosaic.formats.border">
+  <value key="name">neg-top-margin</value>
+  <value key="category">row</value>
+  <value key="label">Negative top margin</value>
+  <value key="action">tile-toggle-class</value>
+  <value key="icon">true</value>
+  <value key="favorite">false</value>
+  <value key="weight">110</value>
+</records>
+
+
 <record name="plone.bundles/tilesandstyles.compile" interface="Products.CMFPlone.interfaces.resources.IBundleRegistry" field="compile">
   <field type="plone.registry.field.Bool">
     <default>True</default>
