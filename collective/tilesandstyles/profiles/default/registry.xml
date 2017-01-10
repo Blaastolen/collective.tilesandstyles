@@ -294,7 +294,7 @@
 </records>
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.border">
+         prefix="plone.app.mosaic.formats.bottom-margin">
   <value key="name">bottom-margin</value>
   <value key="category">row</value>
   <value key="label">Margin bottom</value>
@@ -306,7 +306,7 @@
 
 
 <records interface="plone.app.mosaic.interfaces.IFormat"
-         prefix="plone.app.mosaic.formats.border">
+         prefix="plone.app.mosaic.formats.neg-top-margin">
   <value key="name">neg-top-margin</value>
   <value key="category">row</value>
   <value key="label">Negative top margin</value>
