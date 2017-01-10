@@ -276,6 +276,8 @@
     <element>color-orange</element>
     <element>color-gray</element>
     <element>border</element>
+    <element>bottom-margin</element>
+    <element>neg-top-margin</element>
   </value>
 </record>
 
