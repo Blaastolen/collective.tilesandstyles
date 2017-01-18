@@ -69,7 +69,7 @@ class SearchTile(PersistentTile):
 
         self.query = self.data.get('query')
         if type(self.st) == type(""):
-            st = unicode(self.st, 'utf-8')
+            self.st = unicode(self.st, 'utf-8')
         self.query.append({u'i': u'SearchableText', u'o': u'plone.app.querystring.operation.string.contains', u'v': u'%s'%self.st})
 
         builder = getMultiAdapter((self.context, self.request),
