@@ -56,7 +56,10 @@ class SearchTile(PersistentTile):
 
     @property
     def st(self):
-        return self.request.get("SearchableText",u'')
+        st = self.request.get("SearchableText",u'')
+        if type(st) == type(""):
+            st = unicode(st, 'utf-8')
+        return st
 
     def results(self, query=None, batch=True, b_size=10, b_start=0):
         """ Get properly wrapped search results from the catalog.
@@ -68,10 +71,7 @@ class SearchTile(PersistentTile):
             return None
 
         self.query = self.data.get('query')
-        if type(self.st) == type(""):
-            self.st = unicode(self.st, 'utf-8')
         self.query.append({u'i': u'SearchableText', u'o': u'plone.app.querystring.operation.string.contains', u'v': u'%s'%self.st})
-
         builder = getMultiAdapter((self.context, self.request),
                                   name='querybuilderresults')
 
