@@ -5,7 +5,6 @@ from plone.app.portlets.portlets import base
 
 from zope import schema
 from zope.component import getAdapters
-from zope.formlib import form
 from AccessControl import getSecurityManager
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
